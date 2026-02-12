@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Wind, Snowflake, ThermometerSun, Phone } from "lucide-react";
 import WhatsAppButton from "./WhatsAppButton";
+import { Button } from "@/components/ui/button";
 
 const features = [
   { icon: Snowflake, label: "Split & Inverter" },
@@ -77,8 +78,16 @@ const ComingSoonContent = () => {
         </motion.p>
 
         {/* CTA */}
-        <motion.div variants={itemVariants} className="mb-16">
+        <motion.div variants={itemVariants} className="mb-16 flex flex-col items-center gap-4">
           <WhatsAppButton />
+          <Button
+            asChild
+            variant="outline"
+            size="lg"
+            className="rounded-full px-8 py-4 font-heading text-base font-semibold"
+          >
+            <a href="https://ventoecia.com.br">Retornar à Loja</a>
+          </Button>
         </motion.div>
 
         {/* Feature pills */}
